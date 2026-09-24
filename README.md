@@ -1,1 +1,1 @@
-# disease-gene-cell-browse
+# UCSC Cell Browser Activity
