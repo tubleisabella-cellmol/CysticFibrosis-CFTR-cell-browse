@@ -87,3 +87,25 @@ The UMAP's color-by-gene view gave the impression that Club and Alveolar Epithel
 
 No. CFTR was not among the top marker genes for the Ionocyte_P3 cluster, even though it showed the highest average expression of any cluster in the earlier dot plot analysis. This shows that a gene can be strongly and specifically expressed within a cell type without being one of the statistically top-ranked genes that distinguish that cluster from all others — marker rank reflects how uniquely a gene separates one cluster from the rest, not just its absolute expression level. This is consistent with the activity's point that a disease-relevant gene does not have to be a defining marker gene for a cell type.
 
+### Disease Gene vs. Marker Gene
+
+a. Assigned disease gene: CFTR
+
+b. Marker gene: ASCL3
+
+c. Which gene shows a more cell-type-restricted expression pattern? 
+
+ASCL3 — its expression appears almost exclusively confined to the Ionocyte_P3 cluster, with little to no detectable signal in other epithelial or non-epithelial cell types.
+
+d. Which gene appears more broadly expressed?
+
+CFTR — while its strongest signal is also in Ionocyte_P3, it shows additional low-level, scattered expression across other epithelial clusters such as Club and Alveolar Epithelial Type 2, making its overall pattern broader and less cleanly restricted than ASCL3.
+
+e. What does this comparison teach you about the difference between a disease-associated gene and a cell-type marker gene?
+
+A cell-type marker gene like ASCL3 is defined by how uniquely and consistently it identifies one specific cluster, which makes it statistically useful for classification. A disease-associated gene like CFTR, by contrast, can have broader biological relevance and be expressed at meaningful levels across multiple related cell types, even if it isn't the single best "signature" gene for any one of them. Its importance to disease comes from its function, not from how specifically it marks a cell type.
+
+**Confirmed via multi-gene dot plot (ASCL3 vs CFTR)**
+
+Ionocyte_P3 shows strong dots for both genes, but ASCL3's color is darker (higher relative average expression) and appears in no other cluster. CFTR shows a smaller, lighter dot in Ionocyte_P3 plus additional faint dots scattered across Alveolar Epithelial Type 2, Club, Mucous, Basal, and Goblet clusters — visually confirming that CFTR is more broadly expressed while ASCL3 is essentially restricted to one cell type.
+
