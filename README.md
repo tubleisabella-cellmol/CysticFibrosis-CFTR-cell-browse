@@ -60,3 +60,30 @@ d. Expression pattern: Cell-type restricted, concentrated within the airway/alve
 
 CFTR's concentration in Club cells and Alveolar Epithelial Type 2 cells may reflect these cells' roles in secretory and surfactant-related functions, which could involve fluid and ion transport processes that CFTR, as a chloride channel, would support. The relatively low signal in Ciliated and Alveolar Epithelial Type 1 cells is consistent with their more structural/gas-exchange roles, which may rely less on CFTR-mediated chloride transport. However, since the well-known "ionocyte-dominant" CFTR pattern from other studies wasn't the clearest signal here, this may reflect differences in sequencing depth, capture efficiency, or the specific population sampled in this particular dataset rather than a contradiction of the broader biology.
 
+### Expression Plot (Dot Plot)
+
+a. Plot type used: Dot plot (CFTR expression split by cell_type)
+
+b. Findings
+
+The dot plot reveals that Ionocyte_P3 shows by far the strongest CFTR signal of any cluster — both the largest dot (highest percentage of cells with detectable expression) and the darkest color (highest average expression, approaching the top of the 0.00-2.45 scale). All other clusters, including Alveolar Epithelial Type 2_P3 and Club_P3/P2, show only small, faint dots by comparison.
+
+c. What the dot plot adds beyond the UMAP
+
+The UMAP's color-by-gene view gave the impression that Club and Alveolar Epithelial Type 2 cells had meaningful CFTR expression, since these are large clusters with many cells scattered with weak signal. The dot plot corrects this by normalizing for percent-expressing and average expression per cluster, revealing that Ionocytes — a very rare population — are actually the dominant CFTR-expressing cell type, consistent with published literature on pulmonary ionocytes.
+
+### Marker Genes
+
+**Cluster/cell type examined:** Ionocyte_P3
+
+**Top marker genes (ranked by z-score)**
+1. EPCAM — z ≈ 9.56 (general epithelial marker)
+
+2. ASCL3 — z ≈ 8.33 (transcription factor specific to ionocyte differentiation)
+
+3. HEPACAM2 — z ≈ 8.06
+
+**Does CFTR behave like a cell-type marker in this dataset?**
+
+No. CFTR was not among the top marker genes for the Ionocyte_P3 cluster, even though it showed the highest average expression of any cluster in the earlier dot plot analysis. This shows that a gene can be strongly and specifically expressed within a cell type without being one of the statistically top-ranked genes that distinguish that cluster from all others — marker rank reflects how uniquely a gene separates one cluster from the rest, not just its absolute expression level. This is consistent with the activity's point that a disease-relevant gene does not have to be a defining marker gene for a cell type.
+
