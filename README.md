@@ -109,3 +109,47 @@ A cell-type marker gene like ASCL3 is defined by how uniquely and consistently i
 
 Ionocyte_P3 shows strong dots for both genes, but ASCL3's color is darker (higher relative average expression) and appears in no other cluster. CFTR shows a smaller, lighter dot in Ionocyte_P3 plus additional faint dots scattered across Alveolar Epithelial Type 2, Club, Mucous, Basal, and Goblet clusters — visually confirming that CFTR is more broadly expressed while ASCL3 is essentially restricted to one cell type.
 
+### Connection to Genome Browser and ClinVar
+
+**1. Chromosome location:** 
+
+CFTR is located on chromosome 7 (7q31.2), spanning approximately 189 kb, as identified in the previous UCSC Genome Browser activity.
+
+**2. Disease-associated variant:**
+
+F508del — NM_000492.4(CFTR):c.1521_1523delCTT (p.Phe508del), rs113993960, ClinVar Variation ID 7105. This is an in-frame 3-bp deletion in exon 11 that removes the codon for phenylalanine at position 508, classified as Pathogenic (reviewed by expert panel, 4-star rating).
+
+**3. Cell type(s) expressing the gene (current Cell Browser dataset):**
+
+In the Krasnow Lung Atlas (10x), CFTR shows its strongest, most specific expression in Ionocyte_P3, with additional lower-level expression detected in Club_P3 and Alveolar Epithelial Type 2_P3.
+
+**4. Does the observed cell expression make biological sense?**
+
+Yes. CFTR encodes a chloride channel required for regulating airway surface liquid and mucus hydration, and its expression is concentrated in ionocytes, a rare airway epithelial cell type identified in recent studies as a major site of CFTR activity. The F508del variant causes CFTR protein misfolding and degradation, which would be expected to disrupt chloride transport specifically in the cell types that depend on CFTR most, such as ionocytes and other secretory airway epithelial cells. This loss of function in CFTR-expressing cells is consistent with the thick, dehydrated mucus and airway obstruction characteristic of cystic fibrosis, linking the variant's molecular effect to a specific, biologically plausible cellular source.
+
+**5. Can this single Cell Browser dataset prove that the gene causes the disease?**
+
+No. This dataset shows where CFTR is expressed at the RNA level in single cells from a set of donor lung samples — it does not include the F508del mutation itself, functional chloride-transport data, or clinical outcome data. Expression location alone establishes correlation with a relevant cell type, not causation. As noted in the previous activity, proving that a variant causes disease requires additional evidence: functional protein studies, segregation analysis in families, population frequency data, and independent clinical case reports.
+
+### Reflection
+
+**1. What did the UCSC Cell Browser show you that the UCSC Genome Browser could not?**
+
+The Genome Browser showed me where CFTR is located in the genome and where the F508del variant sits within its exon structure, but it couldn't tell me anything about which cells actually use the gene. The Cell Browser revealed that CFTR expression is concentrated in a specific, rare cell type (ionocytes) rather than spread evenly across all lung cells, connecting the gene's DNA-level location to its actual functional role in specific tissue.
+
+**2. Why can the same gene have different expression levels among different cell types?**
+
+Even though every cell in the body carries the same genome, different cell types turn different genes on or off depending on their specialized function, a process
+controlled by regulatory elements and transcription factors. CFTR is more strongly expressed in ionocytes because these cells are specialized for the ion-transport role that CFTR performs, while other cell types have little biological need for this channel and keep it largely silent.
+
+**3. Why should you be careful when interpreting a gene that shows zero or very low expression in single-cell data?**
+
+A "zero" in single-cell data doesn't necessarily mean a gene is truly absent — it can reflect technical limitations like shallow sequencing depth or low RNA capture efficiency (dropout), especially for genes that are expressed at naturally low levels, like CFTR. Concluding a gene is definitely "not expressed" based on a single dataset risks over-interpreting a technical artifact as a biological fact.
+
+**4. Why is it useful to combine information about genomic location, genetic variants, and cell-specific gene expression?**
+
+Each layer of information answers a different question: genomic location tells you where a gene sits and how it's structured, variant data tells you what specifically goes wrong at the molecular level, and cell-specific expression tells you which cells and tissues are actually affected by that molecular change. Combining all three gives a much more complete picture of how a single DNA change can lead to a disease phenotype in a specific organ.
+
+**5. What was the most interesting observation you made about your assigned gene?**
+
+The most interesting observation was that CFTR's strongest expression wasn't in a common, large cell population but in ionocytes, a rare cell type that makes up less than 1% of the cells in the lung dataset. Also striking was that CFTR showed up as the top-expressing gene in that cluster without being ranked among its top statistical marker genes, which was a clear, hands-on example of the distinction between a gene being important versus a gene being diagnostic for a cell type. 
