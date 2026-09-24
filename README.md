@@ -1,6 +1,6 @@
 # UCSC Cell Browser Activity
 
-###Open the UCSC Cell Browser and Choose a Dataset
+### Open the UCSC Cell Browser and Choose a Dataset
 
 **Dataset name:** Krasnow Lung datasets — 10x (Human Lung Cell Atlas, Travaglini et al.)
 
