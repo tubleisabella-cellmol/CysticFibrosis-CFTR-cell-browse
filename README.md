@@ -1,5 +1,11 @@
 # UCSC Cell Browser Activity
 
+**Name:** Isabella Tuble
+
+**Assigned gene:** CFTR
+
+**Associated disease:** Cystic fibrosis (CF)
+
 ### Open the UCSC Cell Browser and Choose a Dataset
 
 **Dataset name:** Krasnow Lung datasets — 10x (Human Lung Cell Atlas, Travaglini et al.)
@@ -17,6 +23,8 @@ CFTR is most directly associated with cystic fibrosis, a disease that primarily 
 **Publication/Study:**
 
 Travaglini et al., "A molecular cell atlas of the human lung from single cell RNA sequencing," *Nature* (2020) — Krasnow Lab, Stanford.
+
+![Screenshot 1 - Dataset Selected](Images/01_dataset.png)
 
 ### Understanding the Cell Map
 
@@ -46,6 +54,8 @@ e. Which cluster(s) appear to contain little or no detectable expression?
 
 Nearly all non-epithelial clusters show little to no detectable expression, including capillary/vascular cells (Capillary, Artery, Vein, Bronchial Vessel), stromal cells (Pericyte, Fibroblast, Myofibroblast), and immune cells (T cells, B cells, Monocytes, Macrophages, Dendritic cells).
 
+![Screenshot 2 - Gene Expression Across Cell Map](Images/02_gene_expression.png)
+
 ### Identify the Cell Types Expressing Your Gene
 
 a. Cell type/cluster with the strongest visible expression: Club_P3 and Alveolar Epithelial Type 2_P3 (including "Signaling" AT2_P3) show the highest density of orange/red-colored cells.
@@ -60,6 +70,8 @@ d. Expression pattern: Cell-type restricted, concentrated within the airway/alve
 
 CFTR's concentration in Club cells and Alveolar Epithelial Type 2 cells may reflect these cells' roles in secretory and surfactant-related functions, which could involve fluid and ion transport processes that CFTR, as a chloride channel, would support. The relatively low signal in Ciliated and Alveolar Epithelial Type 1 cells is consistent with their more structural/gas-exchange roles, which may rely less on CFTR-mediated chloride transport. However, since the well-known "ionocyte-dominant" CFTR pattern from other studies wasn't the clearest signal here, this may reflect differences in sequencing depth, capture efficiency, or the specific population sampled in this particular dataset rather than a contradiction of the broader biology.
 
+![Screenshot 3 - Cell Types/Clusters](Images/03_cell_types.png)
+
 ### Expression Plot (Dot Plot)
 
 a. Plot type used: Dot plot (CFTR expression split by cell_type)
@@ -71,6 +83,8 @@ The dot plot reveals that Ionocyte_P3 shows by far the strongest CFTR signal of 
 c. What the dot plot adds beyond the UMAP
 
 The UMAP's color-by-gene view gave the impression that Club and Alveolar Epithelial Type 2 cells had meaningful CFTR expression, since these are large clusters with many cells scattered with weak signal. The dot plot corrects this by normalizing for percent-expressing and average expression per cluster, revealing that Ionocytes — a very rare population — are actually the dominant CFTR-expressing cell type, consistent with published literature on pulmonary ionocytes.
+
+![Screenshot 4 - Expression Plot](Images/04_expression_plot.png)
 
 ### Marker Genes
 
@@ -86,6 +100,8 @@ The UMAP's color-by-gene view gave the impression that Club and Alveolar Epithel
 **Does CFTR behave like a cell-type marker in this dataset?**
 
 No. CFTR was not among the top marker genes for the Ionocyte_P3 cluster, even though it showed the highest average expression of any cluster in the earlier dot plot analysis. This shows that a gene can be strongly and specifically expressed within a cell type without being one of the statistically top-ranked genes that distinguish that cluster from all others — marker rank reflects how uniquely a gene separates one cluster from the rest, not just its absolute expression level. This is consistent with the activity's point that a disease-relevant gene does not have to be a defining marker gene for a cell type.
+
+![Screenshot 5 - Marker Genes](Images/05_marker_genes.png)
 
 ### Disease Gene vs. Marker Gene
 
@@ -139,8 +155,7 @@ The Genome Browser showed me where CFTR is located in the genome and where the F
 
 **2. Why can the same gene have different expression levels among different cell types?**
 
-Even though every cell in the body carries the same genome, different cell types turn different genes on or off depending on their specialized function, a process
-controlled by regulatory elements and transcription factors. CFTR is more strongly expressed in ionocytes because these cells are specialized for the ion-transport role that CFTR performs, while other cell types have little biological need for this channel and keep it largely silent.
+Even though every cell in the body carries the same genome, different cell types turn different genes on or off depending on their specialized function, a process controlled by regulatory elements and transcription factors. CFTR is more strongly expressed in ionocytes because these cells are specialized for the ion-transport role that CFTR performs, while other cell types have little biological need for this channel and keep it largely silent.
 
 **3. Why should you be careful when interpreting a gene that shows zero or very low expression in single-cell data?**
 
@@ -152,4 +167,17 @@ Each layer of information answers a different question: genomic location tells y
 
 **5. What was the most interesting observation you made about your assigned gene?**
 
-The most interesting observation was that CFTR's strongest expression wasn't in a common, large cell population but in ionocytes, a rare cell type that makes up less than 1% of the cells in the lung dataset. Also striking was that CFTR showed up as the top-expressing gene in that cluster without being ranked among its top statistical marker genes, which was a clear, hands-on example of the distinction between a gene being important versus a gene being diagnostic for a cell type. 
+The most interesting observation was that CFTR's strongest expression wasn't in a common, large cell population but in ionocytes, a rare cell type that makes up less than 1% of the cells in the lung dataset. Also striking was that CFTR showed up as the top-expressing gene in that cluster without being ranked among its top statistical marker genes, which was a clear, hands-on example of the distinction between a gene being important versus a gene being diagnostic for a cell type.
+
+## References and Links
+
+UCSC Cell Browser: https://cells.ucsc.edu/
+
+Dataset used: https://cells.ucsc.edu/?ds=stanford-czb-hlca+droplet
+
+UCSC Cell Browser Getting Started Guide: https://cellbrowser.readthedocs.io/en/master/ui/getting_started.html
+
+Travaglini et al., "A molecular cell atlas of the human lung from single cell RNA sequencing," Nature (2020)
+
+Previous activity (Genome Browser/ClinVar): https://github.com/tubleisabella-cellmol/CysticFibrosis-CFTR-bioinformatics
+
