@@ -8,6 +8,8 @@
 
 ### Open the UCSC Cell Browser and Choose a Dataset
 
+![Screenshot 1 - Dataset Selected](Images/01_dataset.png)
+
 **Dataset name:** Krasnow Lung datasets — 10x (Human Lung Cell Atlas, Travaglini et al.)
 
 **Dataset URL:** https://cells.ucsc.edu/?ds=stanford-czb-hlca+droplet
@@ -24,8 +26,6 @@ CFTR is most directly associated with cystic fibrosis, a disease that primarily 
 
 Travaglini et al., "A molecular cell atlas of the human lung from single cell RNA sequencing," *Nature* (2020) — Krasnow Lab, Stanford.
 
-![Screenshot 1 - Dataset Selected](Images/01_dataset.png)
-
 ### Understanding the Cell Map
 
 a. Visualization type: UMAP
@@ -37,6 +37,8 @@ c. Clusters represent distinct cell types identified in the human lung (epitheli
 d. Example cluster labels observed: Basal, Ciliated, Club, Mucous, Alveolar Epithelial Type 1, Alveolar Epithelial Type 2
 
 ### Assigned Gene Expression
+
+![Screenshot 2 - Gene Expression Across Cell Map](Images/02_gene_expression.png)
 
 a. Gene symbol: CFTR
 
@@ -54,9 +56,9 @@ e. Which cluster(s) appear to contain little or no detectable expression?
 
 Nearly all non-epithelial clusters show little to no detectable expression, including capillary/vascular cells (Capillary, Artery, Vein, Bronchial Vessel), stromal cells (Pericyte, Fibroblast, Myofibroblast), and immune cells (T cells, B cells, Monocytes, Macrophages, Dendritic cells).
 
-![Screenshot 2 - Gene Expression Across Cell Map](Images/02_gene_expression.png)
-
 ### Identify the Cell Types Expressing Your Gene
+
+![Screenshot 3 - Cell Types/Clusters](Images/03_cell_types.png)
 
 a. Cell type/cluster with the strongest visible expression: Club_P3 and Alveolar Epithelial Type 2_P3 (including "Signaling" AT2_P3) show the highest density of orange/red-colored cells.
 
@@ -70,9 +72,9 @@ d. Expression pattern: Cell-type restricted, concentrated within the airway/alve
 
 CFTR's concentration in Club cells and Alveolar Epithelial Type 2 cells may reflect these cells' roles in secretory and surfactant-related functions, which could involve fluid and ion transport processes that CFTR, as a chloride channel, would support. The relatively low signal in Ciliated and Alveolar Epithelial Type 1 cells is consistent with their more structural/gas-exchange roles, which may rely less on CFTR-mediated chloride transport. However, since the well-known "ionocyte-dominant" CFTR pattern from other studies wasn't the clearest signal here, this may reflect differences in sequencing depth, capture efficiency, or the specific population sampled in this particular dataset rather than a contradiction of the broader biology.
 
-![Screenshot 3 - Cell Types/Clusters](Images/03_cell_types.png)
-
 ### Expression Plot (Dot Plot)
+
+![Screenshot 4 - Expression Plot](Images/04_expression_plot.png)
 
 a. Plot type used: Dot plot (CFTR expression split by cell_type)
 
@@ -84,9 +86,9 @@ c. What the dot plot adds beyond the UMAP
 
 The UMAP's color-by-gene view gave the impression that Club and Alveolar Epithelial Type 2 cells had meaningful CFTR expression, since these are large clusters with many cells scattered with weak signal. The dot plot corrects this by normalizing for percent-expressing and average expression per cluster, revealing that Ionocytes — a very rare population — are actually the dominant CFTR-expressing cell type, consistent with published literature on pulmonary ionocytes.
 
-![Screenshot 4 - Expression Plot](Images/04_expression_plot.png)
-
 ### Marker Genes
+
+![Screenshot 5 - Marker Genes](Images/05_marker_genes.png)
 
 **Cluster/cell type examined:** Ionocyte_P3
 
@@ -100,8 +102,6 @@ The UMAP's color-by-gene view gave the impression that Club and Alveolar Epithel
 **Does CFTR behave like a cell-type marker in this dataset?**
 
 No. CFTR was not among the top marker genes for the Ionocyte_P3 cluster, even though it showed the highest average expression of any cluster in the earlier dot plot analysis. This shows that a gene can be strongly and specifically expressed within a cell type without being one of the statistically top-ranked genes that distinguish that cluster from all others — marker rank reflects how uniquely a gene separates one cluster from the rest, not just its absolute expression level. This is consistent with the activity's point that a disease-relevant gene does not have to be a defining marker gene for a cell type.
-
-![Screenshot 5 - Marker Genes](Images/05_marker_genes.png)
 
 ### Disease Gene vs. Marker Gene
 
